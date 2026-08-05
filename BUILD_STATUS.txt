@@ -1,0 +1,27 @@
+Steam Library Downloader for Linux — validation status
+Date: 2026-08-05
+Version: 0.1.0
+
+Implemented:
+- Native Linux desktop GUI using Python/Tk.
+- Crisp on-screen Steam Mobile QR rendering from the live SteamKit2 challenge URL.
+- QR-account persistence and explicit sign-out/session removal.
+- Owned-license app enumeration through a pinned, patched DepotDownloader 3.4.0 backend.
+- Searchable library, platform/architecture/language/branch controls, destination picker,
+  streaming log, progress parsing, cancellation, and folder opening.
+- Complete x86-64 AppImage packaging script.
+- GitHub Actions build artifact and tagged-release workflow.
+
+Validated locally:
+- Python bytecode compilation: passed.
+- Unit tests: 3 passed.
+- Shell script syntax: passed.
+- GitHub Actions YAML parse: passed.
+- DepotDownloader patch fixture: all required markers inserted exactly once.
+- Headless X11 GUI startup with backend protocol verification: passed.
+- Icons generated and inspected at 256x256 and 512x512.
+
+Not completed in this runtime:
+- The final AppImage was not compiled locally because this container has no .NET 9 SDK
+  and no outbound DNS/package restore access. The committed GitHub Actions workflow is
+  configured to build the patched self-contained backend and AppImage on Ubuntu 24.04.
