@@ -61,4 +61,4 @@ curl -L --fail --retry 3 \
   -o "$APPIMAGETOOL"
 chmod +x "$APPIMAGETOOL"
 ARCH=x86_64 APPIMAGE_EXTRACT_AND_RUN=1 "$APPIMAGETOOL" "$APPDIR" "$OUT/Steam-Library-Downloader-0.1.0-x86_64.AppImage"
-sha256sum "$OUT"/* > "$OUT/SHA256SUMS.txt"
+(cd "$OUT" && sha256sum *.AppImage > SHA256SUMS.txt)
