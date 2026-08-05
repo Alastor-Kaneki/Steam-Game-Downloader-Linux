@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Steam Library Downloader
+Comment=Download files for games owned by your Steam account
+Exec=steam-library-downloader
+Icon=dev.alastorkaneki.steamlibrarydownloader
+Categories=Game;Network;Utility;
+Terminal=false
+StartupWMClass=SteamLibraryDownloader
+Keywords=Steam;Depot;Downloader;Library;
